@@ -1,4 +1,4 @@
-{ nixpkgsFn ? import <nixpkgs> }:
+{ nixpkgsFn ? import ./nixpkgs.nix }:
 
 let
   nixpkgs = nixpkgsFn {
@@ -15,8 +15,9 @@ in
       python3
       ipython
       Keras
-      tensorflow
-      # tensorflowWithCuda
-      # Need to figure out how to get the right version going - (unstable)
+      pillow
+      h5py
+      # tensorflow
+      tensorflowWithCuda
     ];
   }
